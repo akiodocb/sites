@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <style>
+        /* FORMAS */
+        .retangulo-3x2{
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            background-color: white;
+            
+            /* Display: inline-block é visto como fonte, e cria espaços do tamanho da fonte 
+            https://stackoverflow.com/questions/14241696/how-to-get-rid-of-space-between-divs-when-display-inline-block-and-stacked-horiz 
+            
+            Teste para ver os espaços
+            background-color: yellow;*/
+            font-size: 0; 
+
+            /* overflow: hidden; */
+        }
+        .retangulo-1x2{
+            width: 100px;
+            height: 200px;
+        }
+        .retangulo-3x067{
+            width: 300px;
+            height: 67px;
+        }
+        .retangulo-3x04{
+            width: 300px;
+            height: 40px;
+        }
+
+        .circulo{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .losango{
+            width: 100px;
+            height: 100px;
+            transform: rotate(-45deg);
+        }
+
+        .triangulo1{
+            width: 0;
+            height: 0;
+            border-bottom: 80px solid yellow;
+            border-left: 130px solid transparent;
+            border-right: 130px solid transparent;
+        }
+
+        .triangulo2{
+            width: 0;
+            height: 0;
+            border-top: 80px solid yellow;
+            border-left: 130px solid transparent;
+            border-right: 130px solid transparent;            
+        }
+
+        .triangulo3{
+            width: 0;
+            height: 0;
+            border-top: 130px solid transparent;
+            border-bottom: 130px solid transparent;
+            border-left: 200px solid gray;            
+            
+            /* overflow: hidden;
+            top: -15%;
+
+            position: relative; */
+        }
+
+        .triangulo4{
+            width: 0;
+            height: 0;
+            border-top: 130px solid transparent;
+            border-bottom: 130px solid transparent;
+            border-left: 200px solid white;
+            
+            
+            position: relative; 
+            top: -30px;
+        }
+
+        /* ESPAÇAMENTO */
+        .sem-borda{
+            border: none;
+        }
+        .sem-preenchimento{
+            margin: 0px;
+        }
+        .sem-margem{
+            padding: 0px;
+        }
+        .borda-cima-baixo{
+            border-top: 13px;
+            border-bottom: 13px;
+            border-left: 0;
+            border-right: 0;
+        }
+
+
+        /* CORES */
+        .amarelo{background-color: yellow;}
+        .azul{background-color: blue;}
+        .azul-escuro{background-color: darkblue;}
+        .branco{background-color: white;}
+        .verde-escuro{background-color: darkgreen;}
+        .vermelho{background-color: red;}
+        .transparente{opacity: 0;}
+
+        .tri-verde{border-left-color: darkgreen;}
+        .tri-branco{border-left-color: white;}
+        .tri-amarelo{border-left-color: yellow;}
+        .tri-preto{border-left-color: black;}
+        .tri-azul-escuro{border-left-color: darkblue;}
+
+        .borda-branca{ border-style: solid; border-color: white;}
+
+        /* ALINHAMENTOS */
+        .centro-circulo{
+            margin: 50px 100px 50px;
+        }
+        .centro-triangulo1{
+            margin: 20px 20px 20px;
+            margin-bottom: 0;
+        }
+        .centro-triangulo2{
+            margin-left: 20px;
+        }
+
+        .em-linha-bloco{display: inline-block;}
+        .flex{display: inline-flex;}
+        .grid{display: grid;}
+        .absolute{position: absolute;}
+        .relative{position: relative;}
+
+
+        /* CONTAINERS */
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .container2{
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+        }
+        .l1 {transform: translate(15px);}
+        .l2 {transform: translate(-210px);}
+        .l3 {transform: translate(-490px);}
+        .l4 {transform: translate(-710px);}
+
+
+        .l11 {transform: translate(0px 50px);}
+        .l12 {transform: translate(-210px);}
+        .l13 {transform: translate(-490px);}
+        .l14 {transform: translate(-710px);}
+
+        .layer1{left: 0;}
+        .layer2{left: -10px;}
+        .layer3{left: -20px;}
+
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Triângulos - Sobreposição</h2>
+    <div class="retangulo-3x2">
+        <div class="container">
+            <div class="triangulo4 tri-azul-escuro l1"></div>
+            <div class="triangulo4 tri-verde l2"></div>
+            <div class="triangulo4 tri-amarelo l3"></div>
+            <div class="triangulo4 tri-preto l4"></div>
+        </div>
+    </div>
+
+    <h2>África do Sul</h2>
+    <div class="retangulo-3x2">
+        <div class="retangulo-3x067 vermelho"></div>
+        <div class="retangulo-3x04 verde-escuro borda-cima-baixo borda-branca"></div>
+        <div class="retangulo-3x067 azul-escuro"></div>
+    </div>
+
+    <h2>África do Sul - a revanche</h2>
+    <div class="container2 relative">
+        <div class="retangulo-3x2 relative">
+            <div class="retangulo-3x067 vermelho"></div>
+            <div class="retangulo-3x04 verde-escuro borda-cima-baixo borda-branca relative"></div>
+            <div class="retangulo-3x067 azul-escuro"></div>
+            <div class="triangulo4 tri-branco l11 relative"></div>
+        </div>
+    </div>
+
+</body>
+</html>

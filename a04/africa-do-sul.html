@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>África do Sul - Bandeira</title>
+
+    <style>
+        /* POSICIONAMENTO */
+        .relative{position: relative;}
+        .z1{z-index: 1;}
+        
+        .t-230{top: -230px;}
+        .t-490{top: -490px;}
+        .t-750{top: -750px;}
+        .t-1010{top: -1010px;}
+
+        .l30{left: 30px;}
+        .l0{left: 0px;}
+        .l-90{left: -90px;}
+        .l-120{left: -120px;}
+
+        /* FORMAS */
+        .retangulo-3x2{
+            border: 1px solid black;
+            width: 300px;
+            height: 200px;
+            font-size: 0;
+            overflow: hidden;
+        }
+
+        .retangulo-3x067{ width: 300px; height: 67px; }
+        .retangulo-3x04{ width: 300px; height: 40px; }
+
+        .triangulo4{
+            border-top: 130px solid transparent;
+            border-bottom: 130px solid transparent;
+            border-left: 200px solid black;
+        }
+
+        .borda-cima-baixo{
+            border-top: 13px;
+            border-bottom: 13px;
+            border-left: 0;
+            border-right: 0;
+        }
+
+        /* CORES */
+        .azul-escuro{background-color: darkblue;}
+        .verde-escuro{background-color: darkgreen;}
+        .vermelho{background-color: red;}
+
+        .tri-amarelo{border-left-color: yellow;}
+        .tri-branco{border-left-color: white;}
+        .tri-preto{border-left-color: black;}
+        .tri-verde{border-left-color: darkgreen;}
+
+        .borda-branca{ border-style: solid; border-color: white; }
+
+    </style>
+    
+</head>
+
+<body>
+
+    <h2>África do Sul - a revanche</h2>
+    <div class="container2 relative">
+        <div class="retangulo-3x2 relative">
+            <div class="retangulo-3x067 vermelho relative"></div>
+            <div class="retangulo-3x04 verde-escuro borda-cima-baixo borda-branca relative z1"></div>
+            <div class="retangulo-3x067 azul-escuro relative"></div>
+            <div class="triangulo4 tri-branco relative t-230 l30"></div>
+            <div class="triangulo4 tri-verde relative t-490 l0 z1"></div>
+            <div class="triangulo4 tri-amarelo relative t-750 l-90 z1"></div>
+            <div class="triangulo4 tri-preto relative t-1010 l-120 z1"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>
